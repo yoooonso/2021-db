@@ -1,5 +1,6 @@
 # 2021-db
 - 데이터베이스 설계
+<br><br>
 
 ## 3주차 실습 실행 방법
 1. 레포지토리 복사(wsl 환경에서 명령어 입력)
@@ -30,13 +31,18 @@ const pool = mysql.createPool(
 5. 서버 실행(powershell에서) 후 확인
     - npm run start
     - 브라우저를 켜서 주소창에 localhost:3000 입력
-
 6. 기본 화면 
     - localhost:3000으로 들어가면 기본 화면
     - (데이터베이스 설정이 된 경우) localhost:3000/users로 들어가면 DB에 있는 값을 불러와서 출력
 
+    Name|StudentNumber|Major|Class|DateofEnter|Email
+    ---|---|---|---|---|---|
+    윤소영|12191793|정보통신공학과|3|2019-03-01|소영@gmail.com
+    김철수|12345678|정보통신공학과|4|2012-03-01|철수@gmail.com
+    홍길동|87654321|정보통신공학과|1|2021-03-01|길동@gmail.com
+    
+
 ## 8주차 실습 실행 방법
-## 3주차 실습 실행 방법
 1. 레포지토리 복사(wsl 환경에서 명령어 입력)
     - (SSH 설정한 경우) git clone git@git@github.com:yoooonso/2021-db.git
     - (token을 사용하는 경우) git clone https://github.com/yoooonso/2021-db.git
@@ -48,6 +54,9 @@ const pool = mysql.createPool(
 5. 서버 실행(powershell에서) 후 확인
     - npm run start
     - 브라우저를 켜서 주소창에 localhost:3000 입력
+
+## 10주차 실습 실행 방법
+
 
 
 ## <span style="color:red">테이블 작성법</span>

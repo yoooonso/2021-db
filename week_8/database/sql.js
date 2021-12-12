@@ -51,7 +51,7 @@ export const insertSql = {
 export const updateSql = {
     updateEmployee : async (data) => {
         // where 조건(Minit이 "F"인)을 만족하는 행에 대해서 salary 수정
-        const sql = `update employee set Salary = "${data.Salary}" where Minit ="F" `;
+        const sql = `update employee set Salary = "${data.Salary}" where Ssn="${data.Ssn}"`;
         await promisePool.query(sql);
     },
 

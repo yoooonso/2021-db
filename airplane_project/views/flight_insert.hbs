@@ -1,0 +1,36 @@
+<h1>FLIGHT LEG INSTANCE 데이터 삽입</h1>
+
+<form name="instance" method="post" action="/">
+    <div>
+        <label for="flight_number">Flight_Number</label>
+        <input id="flight_number" name="flight_number" type="text" required placeholder="Flight_Number">
+    </div>
+    <div>
+        <label for="leg_number">Leg_Number</label>
+        <input id="leg_number" name="leg_number" type="number" required placeholder="Leg_Number">
+    </div>
+    <div>
+        <label for="leg_date">Leg_Date</label>
+        <input id="leg_date" name="leg_date" type="date" required placeholder="Leg_Date">
+    </div>
+    <div>
+        <label for="no_of_available_seats">NO_OF_AVAILABLE_SEATS</label>
+        <input id="no_of_available_seats" name="no_of_available_seats" type="number" placeholder="NO_OF_AVAILABLE_SEATS">
+    </div>
+    <div>
+        <label for="airplane_id">Airplane_Id</label>
+        <input id="airplane_id" name="airplane_id" type="number" placeholder="Airplane_Id">
+    </div>
+    <div>
+        <label for="departure_time">DEPARTURE_TIME</label>
+        <input id="departure_time" name="departure_time" type="datetime-local" required placeholder="DEPARTURE_TIME">
+    </div>
+    <div>
+        <label for="arrival_time">ARRIVAL_TIME</label>
+        <input id="arrival_time" name="arrival_time" type="datetime-local" required placeholder="ARRIVAL_TIME">
+    </div>
+    <br>
+    <div>
+        <input type="submit" value="삽입" formaction="/admin/flight/insert">
+    </div>
+</form><br>

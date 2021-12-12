@@ -1,0 +1,39 @@
+<h1>{{ title }}</h1>
+
+<table>
+    <tr>
+        <td>Type_Name</td>
+        <td>Max_Seats</td>
+        <td>Company</td>
+    </tr>
+    {{#each airplane_type}}
+    <tr>
+        <td>{{Type_Name}}</td>
+        <td>{{Max_Seats}}</td>
+        <td>{{Company}}</td>
+    </tr>
+    {{/each}}
+</table>
+
+<h1>{{ title2 }}</h1>
+
+<table>
+    <tr>
+        <td>Airplane_Id</td>
+        <td>TOTAL_NUMBER_OF_SEATS</td>
+        <td>Airplane_Type</td>
+    </tr>
+    {{#each airplane}}
+    <tr>
+        <td>{{Airplane_Id}}</td>
+        <td>{{TOTAL_NUMBER_OF_SEATS}}</td>
+        <td>{{Airplane_Type}}</td>
+    </tr>
+    {{/each}}
+</table>
+<br>
+<button type="button" class="navyBtn" onclick="location.href='/admin/airplane/insert'">삽입</button>
+<button type="button" class="navyBtn" onclick="location.href='/admin/airplane/modify'">수정</button>
+<button type="button" class="navyBtn" onclick="location.href='/admin/airplane/delete'">삭제</button><br><br>
+<button type="button" class="navyBtn" onclick="location.href='/admin/airport'">airport</button>
+<button type="button" class="navyBtn" onclick="location.href='/admin/flight'">flight</button>

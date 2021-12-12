@@ -23,9 +23,9 @@ router.post('/', async (req, res) => {
     users.map((user) => {
         if(vars.id === user.Id && vars.password === user.Password){
             checkLogin = true;
-            if(vars.id === 'admin'){
+            if(user.Role === 'admin'){
                 whoAmI = 'admin';
-            } else {
+            } else if(user.Role === 'users'){
                 whoAmI = 'users';
             }
         }

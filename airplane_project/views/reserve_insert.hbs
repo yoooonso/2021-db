@@ -1,0 +1,77 @@
+
+<h3>{{ title }}</h3>
+
+<table>
+    <tr>
+        <td>Flight_Number</td>
+        <td>Leg_Number</td>
+        <td>Leg_Date</td>
+        <td>NO_OF_AVAILABLE_SEATS</td>
+        <td>Airplane_Id</td>
+        <td>DEPARTURE_AIRPORT_CODE</td>
+        <td>DEPARTURE_TIME</td>
+        <td>ARRIVAL_AIRPORT_CODE</td>
+        <td>ARRIVAL_TIME</td>
+    </tr>
+    {{#each flightview}}
+    <tr>
+        <td>{{Flight_Number}}</td>
+        <td>{{Leg_Number}}</td>
+        <td>{{Leg_Date}}</td>
+        <td>{{NO_OF_AVAILABLE_SEATS}}</td>
+        <td>{{Airplane_Id}}</td>
+        <td>{{DEPARTURE_AIRPORT_CODE}}</td>
+        <td>{{DEPARTURE_TIME}}</td>
+        <td>{{ARRIVAL_AIRPORT_CODE}}</td>
+        <td>{{ARRIVAL_TIME}}</td>
+    </tr>
+    {{/each}}
+</table>
+
+
+<h3>{{ title2 }}</h3>
+
+<table>
+    <tr>
+        <td>Flight_Number</td>
+        <td>Fare_Code</td>
+        <td>Amount</td>
+        <td>Restrictions</td>
+    </tr>
+    {{#each fares}}
+    <tr>
+        <td>{{Flight_Number}}</td>
+        <td>{{Fare_Code}}</td>
+        <td>{{Amount}}</td>
+        <td>{{Restrictions}}</td>
+    </tr>
+    {{/each}}
+</table>
+
+<h1>SEAT RESERVATION 데이터 삽입</h1>
+
+<form name="reserve" method="post" action="/">
+    <div>
+        <label for="flight_number">Flight_Number</label>
+        <input id="flight_number" name="flight_number" type="text" required placeholder="Flight_Number">
+    </div>
+    <div>
+        <label for="leg_number">Leg_Number</label>
+        <input id="leg_number" name="leg_number" type="number" required placeholder="Leg_Number">
+    </div>
+    <div>
+        <label for="leg_date">Leg_Date</label>
+        <input id="leg_date" name="leg_date" type="date" required placeholder="Leg_Date">
+    </div>
+    <div>
+        <label for="seat_number">Seat_Number</label>
+        <input id="seat_number" name="seat_number" type="text" placeholder="Seat_Number">
+    </div>
+    <div>
+        <label for="customer_id">Customer_Id </label>
+        <input id="customer_id" name="customer_id" type="text" placeholder="Customer_Id ">
+    </div><br>
+    <div>
+        <input type="submit" value="삽입" formaction="/user/reserve/insert">
+    </div>
+</form><br>

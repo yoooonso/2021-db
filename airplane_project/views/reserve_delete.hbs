@@ -1,0 +1,39 @@
+<h1>{{ title }}</h1>
+
+<table>
+    <tr>
+        <td>Flight_Number</td>
+        <td>Leg_Number</td>
+        <td>Leg_Date</td>
+        <td>Seat_Number</td>
+        <td>Customer_Id</td>
+        <td>User_Name</td>
+        <td>User_Phone</td>
+        <td>Amount</td>
+    </tr>
+    <!-- department 데이터가 있을 때 마다 반복-->
+    {{#each reserve}}
+    <form method="post"> <!--post에서처리-->
+        <tr>
+            <!-- input tag를 사용하여 입력 가능한 형태로 변경함(다른 방법도 검색하면 있음) -->
+            <td><input type="text" name="flight_number" value='{{Flight_Number}}' readonly></td>
+            <td><input type="number" name="leg_number" value={{Leg_Number}} readonly></td>
+            <td><input type="text" name="leg_date" value='{{Leg_Date}}' readonly></td>
+            <td><input type="text" name="seat_number" value='{{Seat_Number}}' readonly></td>
+            <td>{{Customer_Id}}</td>
+            <td>{{User_Name}}</td>
+            <td>{{User_Phone}}</td>
+            <td>{{Amount}}</td>
+            <!-- formation 속성을 활용하여 입력 값을 넘겨줌) -->
+            <td style="border: none; margin-left: 10px;">
+                <button 
+                style="margin-left: 10px;"
+                type="submit" 
+                formaction="/user/reserve/delete">
+                삭제
+                </button>
+            </td>
+        </tr>
+    </form>   
+    {{/each}}
+</table>

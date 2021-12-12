@@ -1,0 +1,36 @@
+<h1>{{ title }}</h1>
+
+<table>
+    <tr>
+        <td>Fname</td>
+        <td>Minit</td>
+        <td>Lname</td>
+        <td>Ssn</td>
+        <td>Bdate</td>
+        <td>Address</td>
+        <td>Sex</td>
+        <td>Salary</td>
+        <td>Super_ssn</td>
+        <td>Dno</td>
+    </tr>
+    <!-- emp_res 데이터가 있을 때 마다 반복-->
+    {{#each emp_res}}
+    <form method="post"> <!--post에서처리-->
+        <tr>
+            <td>{{Fname}}</td>
+            <td>{{Minit}}</td>
+            <td>{{Lname}}</td>
+            <td>{{Ssn}}</td>
+            <td>{{Bdate}}</td>
+            <td>{{Address}}</td>
+            <td>{{Sex}}</td>
+            <!-- input tag를 사용하여 입력 가능한 형태로 변경함(다른 방법도 검색하면 있음) -->
+            <td><input type="number" name="salary" placeholder={{Salary}}></td>
+            <td>{{Super_ssn}}</td>
+            <td>{{Dno}}</td>
+            <!-- formation 속성을 활용하여 입력한 값을 넘겨줌) -->
+            <td><input type="submit" value="수정" formaction="/update/employee"></td>
+        </tr>
+    </form>
+    {{/each}}
+</table>

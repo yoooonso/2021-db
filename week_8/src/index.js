@@ -4,9 +4,9 @@ import express from "express";
 import logger from "morgan";
 import path from "path"; 
 
-// 파일의 경로로 home.js update.js select.js를 불러온다
+// 파일의 경로로 login.js update.js select.js를 불러온다
 // homeRouter은 홈화면, updateRouter는 수정, select는 조회에 관련된 가능을 담당
-import homeRouter from "../routes/home";
+import homeRouter from "../routes/login";
 import updateRouter from "../routes/update";
 import selectRouter from "../routes/select";
 

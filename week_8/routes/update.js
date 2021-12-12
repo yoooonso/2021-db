@@ -32,7 +32,8 @@ router.post('/employee', async (req, res) => {
     console.log(vars.salary);
     
     const data = { // 수정할 salary를 받아서 data 객체를 만듦
-        Salary: vars.salary
+        Salary: vars.salary,
+        Ssn: vars.ssn
     }
     await updateSql.updateEmployee(data);
     // updateSql의 updateEmployee함수로 data를 넘김 

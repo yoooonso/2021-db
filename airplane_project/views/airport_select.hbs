@@ -1,0 +1,24 @@
+<h1>{{ title }}</h1>
+
+<table>
+    <tr>
+        <td>Airport_Code</td>
+        <td>Airport_Name</td>
+        <td>City</td>
+        <td>State</td>
+    </tr>
+    {{#each airport}}
+    <tr>
+        <td>{{Airport_Code}}</td>
+        <td>{{Airport_Name}}</td>
+        <td>{{City}}</td>
+        <td>{{State}}</td>
+    </tr>
+    {{/each}}
+</table>
+<br>
+<button type="button" class="navyBtn" onclick="location.href='/admin/airport/insert'">삽입</button>
+<button type="button" class="navyBtn" onclick="location.href='/admin/airport/modify'">수정</button>
+<button type="button" class="navyBtn" onclick="location.href='/admin/airport/delete'">삭제</button><br><br>
+<button type="button" class="navyBtn" onclick="location.href='/admin/airplane'">airplane</button>
+<button type="button" class="navyBtn" onclick="location.href='/admin/flight'">flight</button>

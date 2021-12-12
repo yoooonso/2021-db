@@ -1,0 +1,37 @@
+<h1>airplane 데이터 삽입</h1>
+
+<form name="airplane" method="post" action="/">
+    <div>
+        <label for="airplane_id">Airplane_Id</label>
+        <input id="airplane_id" name="airplane_id" type="text" required placeholder="Airplane_Id">
+    </div>
+    <div>
+        <label for="total_number_of_seats">TOTAL_NUMBER_OF_SEATS</label>
+        <input id="total_number_of_seats" name="total_number_of_seats" type="text" required placeholder="TOTAL_NUMBER_OF_SEATS">
+    </div>
+    <div>
+        <label for="airplane_type">Airplane_Type</label>
+        <input id="airplane_type" name="airplane_type" type="text" required placeholder="Airplane_Type">
+    </div><br>
+    <div>
+        <input type="submit" value="삽입" formaction="/admin/airplane/insert">
+    </div>
+</form><br>
+
+<h3>{{ title }}</h3>
+<table>
+    <tr>
+        <td>Type_Name</td>
+        <td>Max_Seats</td>
+        <td>Company</td>
+    </tr>
+    {{#each airplane_type}}
+    <tr>
+        <td>{{Type_Name}}</td>
+        <td>{{Max_Seats}}</td>
+        <td>{{Company}}</td>
+    </tr>
+    {{/each}}
+</table>
+
+<br>

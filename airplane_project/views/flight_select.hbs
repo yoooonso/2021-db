@@ -1,0 +1,70 @@
+<h1>{{ title }}</h1>
+
+<table>
+    <tr>
+        <td>Flight_Number</td>
+        <td>Airline</td>
+        <td>Weekdays</td>
+    </tr>
+    {{#each flight}}
+    <tr>
+        <td>{{Flight_Number}}</td>
+        <td>{{Airline}}</td>
+        <td>{{Weekdays}}</td>
+    </tr>
+    {{/each}}
+</table>
+
+<h1>{{ title2 }}</h1>
+
+<table>
+    <tr>
+        <td>Flight_Number</td>
+        <td>Leg_Number</td>
+        <td>DEPARTURE_AIRPORT_CODE</td>
+        <td>SCHEDULED_DEPARTURE_TIME</td>
+        <td>ARRIVAL_AIRPORT_CODE</td>
+        <td>SCHEDULED_ARRIVAL_TIME</td>
+    </tr>
+    {{#each flight_leg}}
+    <tr>
+        <td>{{Flight_Number}}</td>
+        <td>{{Leg_Number}}</td>
+        <td>{{DEPARTURE_AIRPORT_CODE}}</td>
+        <td>{{SCHEDULED_DEPARTURE_TIME}}</td>
+        <td>{{ARRIVAL_AIRPORT_CODE}}</td>
+        <td>{{SCHEDULED_ARRIVAL_TIME}}</td>
+    </tr>
+    {{/each}}
+</table>
+
+<h1>{{ title3 }}</h1>
+
+<table>
+    <tr>
+        <td>Flight_Number</td>
+        <td>Leg_Number</td>
+        <td>Leg_Date</td>
+        <td>NO_OF_AVAILABLE_SEATS</td>
+        <td>Airplane_Id</td>
+        <td>DEPARTURE_TIME</td>
+        <td>ARRIVAL_TIME</td>
+    </tr>
+    {{#each leg_instance}}
+    <tr>
+        <td>{{Flight_Number}}</td>
+        <td>{{Leg_Number}}</td>
+        <td>{{Leg_Date}}</td>
+        <td>{{NO_OF_AVAILABLE_SEATS}}</td>
+        <td>{{Airplane_Id}}</td>
+        <td>{{DEPARTURE_TIME}}</td>
+        <td>{{ARRIVAL_TIME}}</td>
+    </tr>
+    {{/each}}
+</table>
+<br>
+<button type="button" class="navyBtn" onclick="location.href='/admin/flight/insert'">삽입</button>
+<button type="button" class="navyBtn" onclick="location.href='/admin/flight/modify'">수정</button>
+<button type="button" class="navyBtn" onclick="location.href='/admin/flight/delete'">삭제</button><br><br>
+<button type="button" class="navyBtn" onclick="location.href='/admin/airport'">airport</button>
+<button type="button" class="navyBtn" onclick="location.href='/admin/airplane'">airplane</button>

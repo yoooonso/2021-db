@@ -1,0 +1,31 @@
+<h1>{{ title }}</h1>
+
+<table>
+    <tr>
+        <td>Airplane_Id</td>
+        <td>TOTAL_NUMBER_OF_SEATS</td>
+        <td>Airplane_Type</td>
+    </tr>
+    <!-- department 데이터가 있을 때 마다 반복-->
+    {{#each airplane}}
+    <form method="post"> <!--post에서처리-->
+        <tr>
+            <!-- input tag를 사용하여 입력 가능한 형태로 변경함(다른 방법도 검색하면 있음) -->
+            <td>{{Airplane_Id}}</td>
+            <td>{{TOTAL_NUMBER_OF_SEATS}}</td>
+            <td>{{Airplane_Type}}</td>
+            <!-- formation 속성을 활용하여 입력 값을 넘겨줌) -->
+            <td style="border: none; margin-left: 10px;">
+                <button 
+                style="margin-left: 10px;"
+                type="submit" 
+                name="delBtn"
+                value={{Airplane_Id }} 
+                formaction="/admin/airplane/delete">
+                삭제
+                </button>
+            </td>
+        </tr>
+    </form>   
+    {{/each}}
+</table>
